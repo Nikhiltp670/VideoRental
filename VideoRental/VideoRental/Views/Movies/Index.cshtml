@@ -1,0 +1,20 @@
+﻿@model VideoRental.ViewModel.CustomerMovieViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.MovieDetails.Name</h2>
+
+@if(Model.Customers.Count>0)
+{
+    <ul>
+        @foreach (var item in Model.Customers)
+        {
+            <li>
+                @item.Name
+            </li>
+        }
+    </ul>
+}
+
